@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Esconde os checkboxes */
+        input {
+            display: none;
+        }
+
+        .tabuleiro {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .linha {
+            display: flex;
+        }
+
+        .celula {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        /* Bordas */
+        .linha:not(:last-child) .celula {
+            border-bottom: 2px solid black;
+        }
+
+        .celula:not(:last-child) {
+            border-right: 2px solid black;
+        }
+
+        /* 👇 Hover (preview) */
+        .celula:hover {
+            background-color: #eee;
+        }
+
+        .celula:hover::after {
+            content: "X";
+            opacity: 0.3;
+        }
+
+        /* 👇 Quando clicado (mantém) */
+        input:checked + .celula::after {
+            content: "X";
+            opacity: 1;
+        }
+
+        /* Remove preview quando já foi clicado */
+        input:checked + .celula:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabuleiro">
+
+    <div class="linha">
+        <input type="checkbox" id="c1">
+        <label for="c1" class="celula"></label>
+
+        <input type="checkbox" id="c2">
+        <label for="c2" class="celula"></label>
+
+        <input type="checkbox" id="c3">
+        <label for="c3" class="celula"></label>
+    </div>
+
+    <div class="linha">
+        <input type="checkbox" id="c4">
+        <label for="c4" class="celula"></label>
+
+        <input type="checkbox" id="c5">
+        <label for="c5" class="celula"></label>
+
+        <input type="checkbox" id="c6">
+        <label for="c6" class="celula"></label>
+    </div>
+
+    <div class="linha">
+        <input type="checkbox" id="c7">
+        <label for="c7" class="celula"></label>
+
+        <input type="checkbox" id="c8">
+        <label for="c8" class="celula"></label>
+
+        <input type="checkbox" id="c9">
+        <label for="c9" class="celula"></label>
+    </div>
+
+</div>
+</body>
+</html>
