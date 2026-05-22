@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-principal">
+
+        <h1 class="titulo">Lista de Tarefas</h1>
+
+        <div class="container-input">
+            <input 
+                type="text" 
+                id="campoTarefa" 
+                class="campo-tarefa"
+                placeholder="Digite uma tarefa"
+            >
+
+            <button id="botaoAdicionar" class="botao-adicionar">
+                Adicionar
+            </button>
+        </div>
+
+        <div class="container-botao-historico">
+            <button id="botaoHistorico" class="botao-historico">
+                Ver Histórico
+            </button>
+        </div>
+
+        <ul id="listaTarefas" class="lista-tarefas"></ul>
+
+        <div id="historico" class="container-historico oculto">
+            <h2>Histórico</h2>
+
+            <ul id="listaHistorico"></ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
